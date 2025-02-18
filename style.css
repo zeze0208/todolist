@@ -9,6 +9,7 @@ body{
     background-color: white;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
 }
 
 .task-tabs{
@@ -19,6 +20,7 @@ body{
 
 .task-tabs div{
     padding:1em;
+    cursor: pointer;
 }
 
 .task-area{
@@ -33,7 +35,56 @@ body{
     left: 0px;
     top: 40px;
     padding: 0px;
+    transition: 0.5s;
 }
+
+.input-area{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+#task-input{
+    height: 30px;
+    width: 650px;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+}
+#task-input::placeholder {
+    color: rgb(117, 117, 117);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#add-button{
+    background-color: rgb(204, 177, 255);
+    color:black;
+    border: none;
+    width: 50px;
+    height: 30px;
+    /* border-radius: 5px; */
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin-left: 5px;
+    /* box-shadow: 2px rgb(154, 99, 255); */
+}
+
+#add-button:hover{
+    background-color: rgb(154, 99, 255);
+}
+#add-button:active{
+    background-color: rgb(154, 99, 255);
+    transform: scale(0.95);
+}
+
 
 .task{
     display: flex;
@@ -44,3 +95,44 @@ body{
 .task-done{
     text-decoration: line-through;
 }
+
+.button-box{
+    display: flex;
+}
+
+.button-box button {
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin:0;
+    background-color:transparent;
+    transition: 0.3s;
+}
+
+.button-box button i {
+    color: black;
+    font-size: 1.5em;
+}
+
+.button-box button:active{
+    position: relative;
+    top: 2px;
+}
+
+.button-box button:first-child i {
+    color:rgb(204, 177, 255);
+}
+
+.button-box button:last-child i {
+    color:rgb(167, 167, 167);
+}
+
+.button-box button:first-child i:hover{
+    color:rgb(154, 99, 255);
+}
+
+.button-box button:last-child i:hover{
+    color:rgb(73, 73, 73);
+}
+
